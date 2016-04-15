@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tercera aplicacion</title>
+ 
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/temasapp3.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+ 
+<body onLoad="MM_preloadImages('imagenes/prevenciones.jpg','imagenes/mapaubicacion.jpg','imagenes/dimensionescolima2.jpg','imagenes/monitoreopopo2.jpg')">
+<div data-role="page" id="Principal" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+     <h1>Volcánes</h1>
+  </div>
+  <div data-role="main" class="ul-content">
+  <div>
+  <h1>Volcán Popocatépetl</h1>
+  </div>
+ <div>
+<!-- Start WOWSlider.com -->
+<iframe src="visor/indexwow.html" style="width:960px;height:200px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+<!-- End WOWSlider.com -->
+</div>
+  </div>
+  
+<div>
+    <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class="ui-first-child ui-last-child">
+    <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+    <h2>Ubicación</h2>
+      </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+       <h2>Dimensiones</h2>
+       </a>
+     </li>
+    <li class="ui-first-child ui-last-child">
+      <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Dependencias que lo monitorean</h2>
+      </a>
+    </li>
+   <li class="ui-first-child ui-last-child">
+      <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Medidas preventivas en caso de caída de ceniza</h2>
+      </a>
+   </li>
+    <li class="ui-first-child ui-last-child">
+      <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>En caso de erupción</h2>
+      </a>
+   </li>
+   </ul>
+</div>
+<br><br><br>
+
+<div data-role="main" class="ul-content">
+  <div>
+  <h1>Volcán de Colima</h1>
+  </div>
+ <div align="center">
+<a href="http://portal.ucol.mx/cueiv/Volcan-colima.htm"><img src="imagenes/col.jpg" width="70%" height="50%"></a>
+</div>
+</div>
+
+<div>
+    <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class="ui-first-child ui-last-child">
+    <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+    <h2>Actividad volcánica</h2>
+      </a>
+     </li>
+   </ul>
+</div>
+<br><br>
+<div data-role="footer" align="center" data-theme="a">
+     <h4>Aplicación 3
+     <p>Volcán Popocatépetl</p>
+     <p>ALMP</p></h4>
+  </div>
+</div>
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+  <h1>Ubicación</h1>
+  </div>
+ <div data-role="content" align="center">
+     <h2>Es un estratovolcán andesítico-dacítico localizado en el centro de México, en los límites territoriales de los estados de Morelos, Puebla y México. Se localiza a unos 60 km al sureste de la Ciudad de México, 45 km de Puebla, 63 km de Cuernavaca, y 53 km de Tlaxcala.</h2>
+ </div>
+  <div data-role="collapsible" data-content-theme="false">
+    <h1>Volcán Popocatépetl</h1>
+ <div align="center">
+  <img src="imagenes/dimensiones.jpg" width="70%" height="70%">
+  <img src="imagenes/domopopo.jpg" width="70%" height="70%">
+  </div>
+</div>
+<div data-role="footer" data-theme="a">
+   <h4>Aplicación 3
+     <p>Volcán Popocatépetl</p>
+     <p>ALMP</p></h4>
+</div>
+</div>
+ 
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+     <h1>Dimensiones</h1>
+ </div>
+ <div data-role="content" align="center">
+ <h2> El cráter del Popocatépetl es elíptico, de 850 m de eje mayor y de 750 m de eje menor, con una profundidad de 250 a 300 m. Tiene una altura de 5452 msnm y un cráter de 900 m de diámetro y aprox. 200 m de profundidad. Su edificio cubre un área de 500 km2 abarcando los estados de Puebla, México y Morelos.</h2>
+ </div>
+ <div align="center">
+  <img src="imagenes/popocatepetl5.jpg" width="70%" height="70%"></div>
+ <div data-role="footer" data-theme="a">
+ <h4>Aplicación 3
+     <p>Volcán Popocatépetl</p>
+     <p>ALMP</p></h4>
+ </div>
+</div>
+</div>
+
+ <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Dependencias que lo monitorean</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <h2>Cuatro tipos de monitoreo se han establecido en el volcán: visual, sísmico, geodésico y geoquímico, de los cuales el más importante es el sísmico. La red de monitoreo del Popocatépetl está compuesta por 15 estaciones localizadas en las laderas circundantes del volcán en sitios con altitudes de hasta 4300 m y a 1.5 km del cráter. La instrumentación consta de 8 sismógrafos triaxiales de periodo corto, 4 de banda ancha, 4 inclinómetros biaxiales para medir deformación, una cámara de video con enlace de microondas, un radar doppler meteorológico y diversos equipos para mediciones geodésicas, análisis químicos y determinación de las concentraciones de gases SO2 y CO2. </h2></div>
+ </div>
+ <div align="center">
+ <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','imagenes/monitoreopopo2.jpg',1)"><img src="imagenes/monitoreopopo.jpg" width="704" height="480" id="Image9"></a></div>
+ <div data-role="footer" data-theme="a">
+  <h4>Aplicación 3
+     <p>Volcán Popocatépetl</p>
+     <p>ALMP</p></h4>
+ </div>
+</div>
+ </div>
+
+ <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Medidas preventivas en caso de caída de ceniza</h1>
+ </div>
+ <div data-role="content">
+ <div>
+ <h2>La Secretaría de Gobernación, a través de la Coordinación Nacional de Protección Civil y de la Secretaría de Salud informa las siguientes medidas de protección a la población que pueda estar expuesta a cenizas:
+
+<p>-Evitar la exposición a cenizas.</p>
+<p>-No automedicarse y no usar gotas para los ojos; en caso de “sensación de basura” en el ojo debe acudir a su médico.</p>
+<p>-Retirar la ceniza de techos para reducir el riesgo de colapsos por el peso acumulado.</p>
+<p>-Recoger con escobas y palas la ceniza acumulada en la calle para evitar que tape los drenajes y con ello posibles inundaciones.</p>
+<p>-Mantener perfectamente tapados los recipientes en los que se acumule agua para uso o consumo de las personas.</p>
+<p>-Se recomienda a la población actuar de manera preventiva. Las unidades médicas del Sector Salud están preparadas para brindar atención y asesoría en la materia.</p></h2>
+<div align="center">
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','imagenes/prevenciones.jpg',1)"><img src="imagenes/volcancenizas.jpg" width="500" height="400" id="Image5"></a></div>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>Aplicación 3
+     <p>Volcán Popocatépetl</p>
+     <p>ALMP</p></h4>
+ </div>
+ </div>
+ </div>
+
+ <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>En caso de erupción</h1>
+ </div>
+ <div data-role="content">
+ <h2><p>Antes</p>
+Identifique si en su comunidad hay amenaza volcánica y trate de no ubicarse dentro de su área de influencia.<br>
+Cubra los depósitos de agua para evitar contaminación por la caída de ceniza.<br>
+Conozca cual es la ruta de evacuación más apropiada y menos expuesta a los efectos de la erupción y diríjase siempre hacia tierras más alta.<br>
+Si sabe de actividad volcánica, coloque cinta adhesiva en las ventanas debido a las ondas de choque que pueden causar las explosiones.<br>
+Aleje los animales de las zonas próximas a los ríos y lugares donde caen cenizas por posibles avalanchas.<br><br>
+<p>Durante</p>
+Aunque la erupción le parezca tranquila, no se acerque al volcán.<br>
+El viento puede arrastrar vapores calientes y existe la posibilidad que se arrojen súbitamente productos sólidos.<br>
+Busque refugio bajo techo, si no lo encuentra, procure respirar a través de una tela humedecida de agua o vinagre, eso evita el paso de los gases y el polvo volcánico. Proteja sus ojos cerrándolos tanto como sea posible.<br>
+Si las autoridades deciden establecer la evacuación, tome el equipaje familiar que ya preparó (ropa de abrigo, documentación y medicamentos personales) limitando el equipaje a lo que pueda transportar a mano cada persona.<br>
+Si es sorprendido por una nube de gases, protéjase con una tela humedecida en agua o vinagre.<br>
+Evite las hondonadas, donde pueden acumularse gases nocivos, incluso después de finalizada la erupción.<br>
+Desconecte la energía eléctrica y cierre las llaves de agua y el gas. Utilice el teléfono lo menos que le sea posible y cierre muy bien la vivienda al salir de esta.<br>
+Busque protección hacia lugares más altos y no permanezca cerca de ríos o quebradas.<br>
+Fíjese bien en la corriente de agua y al material que transporta antes de cruzar un puente.<br>
+Si tiene conocimiento de un deslizamiento que está represando un río, informe de inmediato a sus vecinos y a las autoridades.<br><br>
+<p>Después</p>
+Permanezca en sitio seguro hasta que las autoridades informen las medidas a seguir.<br></h2></div>
+ <div align="center">
+ <a href="http://www.cenaced.org.mx/blog/item/28-que-hacer-ante-una-erupcion-del-volcan-popocatepetl.html"><img src="imagenes/erupcionvolcan.jpg" width="70%" height="50%"></a>
+ </div>
+ <div data-role="footer" data-theme="a">
+  <h4>Aplicación 3
+     <p>Volcán Popocatépetl</p>
+     <p>ALMP</p></h4>
+ </div>
+ </div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+ <h1>Actividad volcánica</h1>
+ </div>
+ <div align="center">
+  <a href="http://www.volcanodiscovery.com/es/colima/news.html"><img src="imagenes/colimaactividad.jpg" width="70%" height="50%"></a></div>
+ <div data-role="content" align="center">
+ <h2>La actividad del volcán ha disminuido en general. Las explosiones han sido en su mayoría débil y relativamente raros (algunos diarios) y el resplandor previamente continuamente visible en el cráter de la Cumbre, indicativo de la pequeña cúpula de lava nueva, recientemente ha sido visible sólo durante la mayor cantidad de eventos de desgasificación o de explosión.
+A su vez, esto sugiere que el crecimiento de la bóveda ha sido muy bajo o incluso parado por ahora.</h2></div>
+   <div data-role="collapsible" data-content-theme="false">
+    <h1>Volcán de Fuego</h1>
+ <div align="center">
+<img src="imagenes/dimensionescolima.jpg" width="70%" height="70%">
+</div>
+  </div>
+ <div data-role="content" align="center">
+  <h2>Actividad explosiva suave continúa desde el volcán. En su mayoría pequeñas explosiones se producen a intervalos irregulares típicamente de varias horas de la ventilación de Cumbre donde un pequeño domo de lava nueva es actual y probablemente está creciendo lentamente.</h2></div>
+ <div data-role="footer" data-theme="a">
+ <h4>Aplicación 3
+     <p>Volcán Popocatépetl</p>
+     <p>ALMP</p></h4>
+ </div>
+ </div>
+</body>
+ </html>
